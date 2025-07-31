@@ -1,5 +1,3 @@
-Certainly! Below is a sample `README.md` file template for your Yocto layer repository (e.g., `meta-g239-drivers`) providing the custom Logitech G923/G29 driver. It explains how to clone the repo, add it to a Yocto project, and build the module or include it in images.
-
 # meta-g239-drivers
 
 Custom Yocto layer providing the out-of-tree `lg4ff` kernel module (G923/G29 Racing Wheel support) using https://github.com/berarma/new-lg4ff (release 0.4.0).
