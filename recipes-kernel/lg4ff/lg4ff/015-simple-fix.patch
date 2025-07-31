@@ -1,0 +1,19 @@
+--- a/hid-lg4ff.c
++++ b/hid-lg4ff.c
+@@ -1,3 +1,5 @@
++#define CONFIG_LOGIWHEELS_FF
++
+ // SPDX-License-Identifier: GPL-2.0-or-later
+ /*
+  *  Force feedback support for Logitech Gaming Wheels
+@@ -20,6 +22,8 @@
+ #include "hid-lg4ff.h"
+ #include "hid-ids.h"
+ 
++int lg4ff_no_autoswitch = 0;
++
+ #define LG4FF_VERSION "0.4.0"
+ 
+ #define LG4FF_MMODE_IS_MULTIMODE 0
+ #define LG4FF_MMODE_SWITCHED 1
+ #define LG4FF_MMODE_NOT_MULTIMODE 2 

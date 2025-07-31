@@ -1,0 +1,20 @@
+--- a/hid-lg4ff.h
++++ b/hid-lg4ff.h
+@@ -9,6 +9,8 @@
+ #ifndef __HID_LG4FF_H
+ #define __HID_LG4FF_H
+ 
++extern bool lg4ff_no_autoswitch;
++
+ #ifdef CONFIG_LG4FF
+ int lg4ff_adjust_input_event(struct hid_device *hid, struct hid_field *field,
+ 			     struct hid_usage *usage, __s32 value, struct lg4ff_device_entry *entry);
+@@ -22,6 +24,7 @@ int lg4ff_deinit(struct hid_device *hid);
+ #else
+ static inline int lg4ff_adjust_input_event(struct hid_device *hid, struct hid_field *field,
+ 					   struct hid_usage *usage, __s32 value, struct lg4ff_device_entry *entry) { return 0; }
++static inline int lg4ff_raw_event(struct hid_device *hdev, struct hid_report *report,
++				  u8 *rd, int size) { return 0; }
+ static inline int lg4ff_init(struct hid_device *hdev) { return -1; }
+ static inline int lg4ff_deinit(struct hid_device *hdev) { return -1; }
+ #endif 

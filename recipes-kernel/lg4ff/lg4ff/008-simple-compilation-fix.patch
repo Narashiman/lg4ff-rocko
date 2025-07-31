@@ -1,0 +1,17 @@
+--- a/hid-lg4ff.c
++++ b/hid-lg4ff.c
+@@ -1,3 +1,5 @@
++#include <stdbool.h>
++
+ /*
+  *  HID driver for Logitech Unifying receivers
+  *
+@@ -16,6 +18,8 @@
+ #include "hid-lg4ff.h"
+ #include "hid-ids.h"
+ 
++bool lg4ff_no_autoswitch = false;
++
+ #define LG4FF_MMODE_IS_MULTIMODE 0
+ #define LG4FF_MMODE_SWITCHED 1
+ #define LG4FF_MMODE_NOT_MULTIMODE 2 

@@ -1,0 +1,11 @@
+--- a/hid-lg4ff.h
++++ b/hid-lg4ff.h
+@@ -5,7 +5,7 @@
+ #ifdef CONFIG_LOGIWHEELS_FF
+ extern int lg4ff_no_autoswitch; /* From hid-lg.c */
+ 
+-int lg4ff_adjust_input_event(struct hid_device *hid, struct hid_field *field,
++int lg4ff_adjust_input_event(struct hid_device *hid, struct hid_field *field,
+                              struct hid_usage *usage, s32 value, struct lg_drv_data *drv_data);
+ int lg4ff_raw_event(struct hid_device *hdev, struct hid_report *report,
+                 u8 *rd, int size, struct lg_drv_data *drv_data); 
