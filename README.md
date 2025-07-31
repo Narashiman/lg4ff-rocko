@@ -16,9 +16,8 @@ Custom Yocto layer providing the out-of-tree `lg4ff` kernel module (G923/G29 Rac
 
 ```bash
 cd /path/to/yocto/sources
-git clone https://github.com/your-org/meta-g239-drivers.git meta-g239-drivers
+git clone https://github.com/Narashiman/lg4ff-rocko.git meta-g239-drivers
 ```
-_Replace the URL with your actual repo location if different._
 
 ### 2. Add the layer to your Yocto build
 
