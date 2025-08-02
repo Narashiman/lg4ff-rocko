@@ -15,7 +15,10 @@ S = "${WORKDIR}/new-lg4ff-0.4.0"
 
 inherit module
 
+# Ensure our custom driver loads and overrides default drivers
 KERNEL_MODULE_AUTOLOAD += "lg4ff"
+KERNEL_MODULE_PROBECONF += "lg4ff"
+module_conf_hid-logitech-new = "blacklist hid-logitech"
 
 # Make sure O points to the kernel build dir and KERNEL_SRC is right (Yocto provides both)
 #EXTRA_OEMAKE = "KERNEL_SRC=${STAGING_KERNEL_DIR}"
